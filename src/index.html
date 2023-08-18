@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="footer, address, phone, icons" />
+    <title>EV Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="STYLESHEET.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=EB+Garamond&family=Fira+Sans+Condensed:wght@200&family=Lobster&family=Lobster+Two&family=Montserrat&family=Roboto+Mono:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://apis.mapmyindia.com/advancedmaps/v1/fcd00e0cc9349d6c1e7c4ccbbdf3ff4d/map_load?v=1.5"></script>
+</head>
+
+<body>
+    <section class="header">
+        <nav class="navbar bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">EV Service</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">EV Service</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                    href="#footer">Contact Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#mapy">Station Locator</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="text-box">
+            <h1>Electric Vehicle Service</h1>
+            <p>The one-stop solution for all your electric vehicle's needs</p>
+            <a href="https://www.mapmyindia.com/" class="hero-btn">Know More</a>
+        </div>
+    </section>
+
+    <section class="trees">
+        <div id="pls">
+            <h1>EV Service</h1>
+            <p>Our aim is to collaborate with both large and small providers to provide the most accurate real-time view
+                of EV charging stations throughout the world, making life easier for OEMs and developers and allowing
+                drivers to hit the road with confidence. We would act as a bridge between consumers and EV station
+                providers to ensure that all resources can be utilised to the maximum. We have the capability to help
+                consumers in planning their trips</p>
+        </div>
+        <div class="type">
+            <div class="ofd">
+                <h2>Charging Station Locator</h2>
+                <h5 class="available">* AVAILABLE NOW</h5>
+                <p>Helps you find the nearest charging station for your EV along with details about each station. Also
+                    tells about the availability at each station and the approximate waiting time. Gives an estimate of
+                    the time it will take to charge your EV.</p>
+            </div>
+            <div class="ofe">
+                <h2>Trip Planner</h2>
+                <p>Worried about your EV discharging while you are on a trip? No need to worry about that now since we
+                    provide the feature to plan optimum trips keeping things like accommodation, pricing, and time to
+                    charge in mind.</p>
+            </div>
+        </div>
+        <div class="type">
+            <div class="ofdd">
+                <h2>Mobile EV Charger</h2>
+                <p>If you ever get stuck in the middle of nowhere with no charging station nearby, no need to worry as
+                    we can get you the nearest mobile EV station wherever you are and give you enough charge for you to
+                    reach a charging station.</p>
+            </div>
+            <div class="ofee">
+                <h2>Rest while charging</h2>
+                <p>No need to get bored while charging; check out nearest cafes and restaurants and rest while we charge
+                    your vehicles.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="maph">
+        <h1>EV STATION LOCATOR</h1>
+    </div>
+    <section class="mapp">
+        <a name="mapy"></a>
+        <div id="map">
+            <p id="ma"></p>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var map = new MapmyIndia.Map("map", {
+                    center: [19.082681585289972, 72.85849569200829],
+                    zoomControl: true,
+                    hybrid: true,
+                    search: true,
+                    location: true,
+                });
+        
+                var database = {
+                    "database": [
+                        {
+                            "name": "Electric Vehicle Charging Station",
+                            "contact": 9870407928,
+                            "latitude": 19.1026,
+                            "longitude": 72.8242,
+                            "address": "4WQP+753, Bhandup, Datar Colony, Bhandup East, Mumbai, Maharashtra 400042"
+                        },
+                        {
+                            "name": "Magenta ChargeGrid Charging Station",
+                            "contact": 9870403728,
+                            "latitude": 19.1247,
+                            "longitude": 72.9488,
+                            "address": "17, Lal Bahadur Shastri Rd, opposite Home Town, central, Chandan Nagar, Vikhroli West, Mumbai, Maharashtra 400083"
+                        },
+                        {
+                            "name": "Tata Charging Station",
+                            "contact": 9770403928,
+                            "latitude": 19.1149,
+                            "longitude": 72.9267,
+                            "address": "4WQP+753, Bhandup, Datar Colony, Bhandup East, Mumbai, Maharashtra 400042"
+                        },
+                        {
+                            "name": "Eva Charging Station",
+                            "contact": 9870403988,
+                            "latitude": 19.082681585289972,
+                            "longitude": 72.85849569200829,
+                            "address": "59th Floor, Platina, C.59, G Block Rd, near Citibank, Bandra Kurla Complex, Bandra East, 400051"
+                        },
+                        {
+                            "name": "PluginIndia Electrics (OPC) PVT. LTD",
+                            "contact": 9870303928,
+                            "latitude": 19.0111,
+                            "longitude": 73.8747,
+                            "address": "Shop #4, Ayesha Apts, 2nd Hasnabad Ln, Santacruz West, Mumbai, Maharashtra 400054"
+                        },
+                        {
+                            "name": "Charge And Drive Charging Station",
+                            "contact": 9870493928,
+                            "latitude": 19.197,
+                            "longitude": 72.845,
+                            "address": "G-603/604, Vasari Hill Rd, Malad, Sunder Nagar, Goregaon West, Mumbai, Maharashtra 400064"
+                        },
+                        {
+                            "name": "Electric Vehicle Charging Station",
+                            "contact": 9870402928,
+                            "latitude": 19.06960285587237,
+                            "longitude": 72.88245233165571,
+                            "address": "railway ticket room, near, Sai seva krupa society E-1010, Jagruti Nagar, Police Colony, Kurla, Mumbai, Maharashtra 400024"
+                        },
+                        {
+                            "name": "VoltaPoint",
+                            "contact": 9870453928,
+                            "latitude": 19.01537262272815,
+                            "longitude": 72.82587941194159,
+                            "address": "527, Building No - 2, SRA Cooperative Society, Prabhadevi, near Ahuja Towers, Mumbai, Maharashtra 400025"
+                        },
+                        {
+                            "name": "BEST Electric Charger for Mahindra e2oPlus",
+                            "contact": 9070403928,
+                            "latitude": 19.015681859310746,
+                            "longitude": 72.81999187272007,
+                            "address": "2R7C+54W, Municipal Colony, Worli Shivaji Nagar, Worli, Mumbai, Maharashtra 400030"
+                        },
+                        {
+                            "name": "Volttic Charging Station",
+                            "contact": 9870103928,
+                            "latitude": 19.123570241710784,
+                            "longitude": 72.88737149128913,
+                            "address": "4VCP+3R9, Military Rd, Raje Shivaji Nagar, Marol, Andheri East, Mumbai, Maharashtra 400072"
+                        }
+                    ]
+                };
+        
+                initializeMap(map, database.database);
+        
+                function initializeMap(map, locations) {
+                    locations.forEach(location => {
+                        L.marker([location.latitude, location.longitude])
+                            .addTo(map)
+                            .bindPopup(`<b>${location.name}</b><br>${location.address}`);
+                    });
+                }
+            });
+        </script>
+        
+        
+    </section>
+
+    <section class="trees">
+        <div id="pls">
+            <h1>Types of Chargers</h1>
+            <p>Take a look at the types of chargers and determine which one is best suited for your needs. You may also
+                filter stations accordingly.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-7 g-4">
+            <div class="col-sm">
+                <div class="card" style="width: 14rem;">
+                    <img class="card-img-top" src="../assets/images/Type-1.svg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">5 Pin AC</h5>
+                        <p class="card-text">Power:7kW <br>Range: 25 miles/ hour of charge <br>Type: Standard
+                            connector <br>Locking: No locking</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 14rem;">
+                    <img class="card-img-top" src="../assets/images/Type-2.svg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">7 Pin AC</h5>
+                        <p class="card-text">Power:22kW <br>Range: 75 miles/ hour of charge <br>Type: Three
+                            Phase<br>Locking: In-built</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 14rem;">
+                    <img class="card-img-top" src="../assets/images/CHAdeMO.svg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">CHAdeMO</h5>
+                        <p class="card-text">Power:100kW <br>Range: 150 miles/ hour of charge <br>Type:
+                            DC<br>Locking:No locking</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 14rem;">
+                    <img class="card-img-top" src="../assets/images/CCS-Cable.svg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">CCS</h5>
+                        <p class="card-text">Power:150kW <br>Range: 225 miles/ hour of charge <br>Type: DC
+                            <br>Locking: In-built</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 14rem;">
+                    <img class="card-img-top" src="../assets/images/3-pin.svg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">3 Pin plug</h5>
+                        <p class="card-text">Power:2.3kW <br>Range: 8 miles/ hour of charge <br>Type: AC
+                            3-pin<br>Locking: None</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="treees">
+        <div id="plss">
+            <h1>About us</h1>
+            <div class="img-portr">
+                <img src="../assets/images/about-us.webp" alt="About Us">
+            </div>
+            <p>EV Service aims to be the largest database for EV charging stations so that all users can find a
+                convenient and reliable EV station no matter where they are. We also plan on adding more
+                functionalities such as adding your own station and trip planner so that you never have to worry about
+                your EV vehicle getting discharged in the middle of your trip. Keep checking our website for more
+                updates!</p>
+        </div>
+    </section>
+
+    <footer class="footer-distributed">
+        <a name="footer"></a>
+        <div class="footer-left">
+            <h3 id="f">EV Service</h3>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>BITS Pilani</span> India</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 XXXXX XXXXX</p>
+            </div>
+            <div></div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about"><span>About the company</span> Our aim is to provide the best EV services
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
